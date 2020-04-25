@@ -1,15 +1,16 @@
-from keras.layers import Layer, Input, Conv2D, Activation, add, BatchNormalization, UpSampling2D, ZeroPadding2D, Conv2DTranspose, Flatten, MaxPooling2D, AveragePooling2D
-from keras_contrib.layers.normalization import InstanceNormalization, InputSpec
+from keras.layers import Layer, Input, Conv2D,Activation, add, BatchNormalization, UpSampling2D, ZeroPadding2D, Conv2DTranspose, Flatten, MaxPooling2D, AveragePooling2D
+from keras_contrib.layers.normalization.instancenormalization import InstanceNormalization
+from tensorflow.keras.layers import InputSpec
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.core import Dense
 from keras.optimizers import Adam
 from keras.backend import mean
 from keras.models import Model, model_from_json
 from keras.utils import plot_model
-from keras.engine.topology import Container
-
+# from keras.engine.topology import Container
+from keras.engine.network import Network as Container
 from collections import OrderedDict
-from scipy.misc import imsave, toimage  # has depricated
+# from scipy.misc import imsave, toimage  # has depricated
 import numpy as np
 import random
 import datetime
